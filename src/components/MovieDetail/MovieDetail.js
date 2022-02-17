@@ -13,11 +13,11 @@ const MovieDetail = () => {
   const movie = getUser(params.movieId);
 
   return (
-    <div>
+    <div className="movie-detail">
+      <Link to="/">Eliminar pelicula</Link>
       <h4>{movie.title}</h4>
       <img src={movie.image} alt={movie.title} />
       <p>{movie.description}</p>
-      <Link to="/">Eliminar</Link>
     </div>
   );
 };

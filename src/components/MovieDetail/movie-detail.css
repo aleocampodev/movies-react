@@ -1,3 +1,12 @@
-.filter-movies{
-	flex:1;
+.movie-detail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.movie-detail img {
+  width: 455px;
+  height: 755px;
 }

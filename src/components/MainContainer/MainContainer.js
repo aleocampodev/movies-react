@@ -12,8 +12,8 @@ function MainContainer() {
 
   const handleChange = (e) => {
     console.log("bu", e);
-    const value = setNameMovie(e.target.value);
-    value.trim();
+
+    setNameMovie(e.target.value.replace(/\s+/g, " "));
   };
 
   /*const handleSubmit = (e) => {
@@ -26,7 +26,7 @@ function MainContainer() {
   const spiderMovie = async () => {
     // search
     const res = await fetch(
-      `https://imdb-api.com/en/API/SearchMovie/k_eq0u6qz8/spider%20man`
+      `https://imdb-api.com/en/API/SearchMovie/k_9ggk3275/spider%20man`
     );
     const resJSON = await res.json();
     console.log(resJSON, "holajson");
@@ -34,7 +34,7 @@ function MainContainer() {
   };
 
   const getMovie = () => {
-    fetch(`https://imdb-api.com/en/API/SearchMovie/k_eq0u6qz8/${nameMovie}`)
+    fetch(`https://imdb-api.com/en/API/SearchMovie/k_9ggk3275/${nameMovie}`)
       .then((res) => {
         const data = res.json();
         if (res.status === 200 && data) {
@@ -46,7 +46,7 @@ function MainContainer() {
         }
       })
       .then((data) => {
-        console.log(data.results, "holi");
+        console.log(data.results, "trayendo data");
         setMovies(data.results);
       })
       .catch((error) => {
@@ -76,19 +76,19 @@ function MainContainer() {
           <div className="form-input">
             <form>
               <input
-                type="text"
+                type="search"
                 placeholder="Busca la pelicula"
-                autoFocus
                 value={nameMovie}
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
+                autoFocus
               />
             </form>
           </div>
           <div className="content-card">
             {movies &&
               movies.map((movie) => (
-                <Link to={movie.id.toString()} key={movie.id}>
+                <Link to={movie.id.toString()} key={movie.id} className="link">
                   <Card {...movie} />
                 </Link>
               ))}
