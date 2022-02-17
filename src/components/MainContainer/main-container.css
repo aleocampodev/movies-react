@@ -1,0 +1,25 @@
+.main-container {
+  display: flex;
+}
+
+.content-card {
+  width: 60%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-input input {
+  width: 30%;
+  margin: 53px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.box-right{
+  flex:1;
+}
+
+section{
+  flex:1;
+}

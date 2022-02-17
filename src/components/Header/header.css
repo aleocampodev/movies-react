@@ -1,9 +1,8 @@
 .App-header {
   flex: 1;
   display: flex;
-  margin: 55px 56px 0 65px;
-  align-items: center;
-  justify-content: center;
+  margin:0 auto;
+  
 }
 
 .App-logo {
