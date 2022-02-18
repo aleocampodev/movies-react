@@ -8,13 +8,17 @@
   width: 100%;
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .link {
   text-decoration: none;
 }
 
+.form-input form {
+  display: grid;
+  place-items: center;
+}
 .form-input form input {
   width: 80%;
   margin: 53px;
