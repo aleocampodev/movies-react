@@ -1,8 +1,7 @@
 .App {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 15px;
 }

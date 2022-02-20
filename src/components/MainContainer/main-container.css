@@ -1,11 +1,12 @@
 .main-container {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .content-card {
   width: 100%;
+  height: 100%;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -32,10 +33,7 @@
 
 .box-right {
   flex: 1;
-  background-color: red;
   height: 100vh;
-}
-
-section {
-  flex: 1;
+  margin-left: 15px;
+  margin-right: 15px;
 }
