@@ -1,0 +1,10 @@
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 53px;
+}
+
+.loading img {
+  width: 350px;
+}

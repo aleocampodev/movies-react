@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import Loading from "../Loading/Loading";
 import Card from "../Card/Card";
 import "./main-container.css";
 
@@ -11,68 +12,63 @@ function MainContainer() {
   const {
     register,
     handleSubmit,
-    setValue,
     reset,
     formState: { errors },
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  /*const spiderMovie = async () => {
+  const spiderMovie = async () => {
     try {
       const res = await fetch(
         `https://imdb-api.com/en/API/SearchMovie/k_eq0u6qz8/spider%20man`
       );
       const resJSON = await res.json();
-      console.log(resJSON, "holajson");
+      
       setMovies(resJSON.results);
     } catch (error) {
       console.log(error);
     }
-  };*/
+  };
 
   const getMovie = (nameMovie) => {
     setIsLoading(true);
     setHasError(false);
-    fetch(`https://imdb-api.com/en/API/SearchMovie/k_wwo8vztv/${nameMovie}`)
+    fetch(`https://imdb-api.com/en/API/SearchMovie/k_9ggk3275/${nameMovie}`)
       .then((res) => {
-        console.log(res, "hola res");
+        
         return res.json();
       })
       .then((data) => {
-        console.log(data.results, "trayendo data");
+        
         setMovies(data.results);
         setIsLoading(false);
         setHasError(false);
-        if (
-          !data.results ||
-          data.results.length === 0 ||
-          data.results === null
-        ) {
+        if (data.results.length === 0 || data.results === null) {
           setHasError(true);
-          console.log(data, "data");
+          setIsLoading(false);
+          
         }
         reset();
-        setIsLoading(false);
-        setHasError(false);
       })
       .catch((error) => {
         console.log(error);
         setHasError(true);
         setIsLoading(false);
       });
-    setIsLoading(true);
+
     setHasError(false);
+    setIsLoading(true);
   };
 
   const onSubmit = (value) => {
-    console.log("hola evento", errors, value.nameMovie);
+    
     getMovie(value.nameMovie);
   };
 
-  /*useEffect(() => {
+  useEffect(() => {
     spiderMovie();
-  }, []);*/
+  }, []);
 
   return (
     <>
@@ -97,7 +93,8 @@ function MainContainer() {
                   },
                   pattern: {
                     value: /^[^\s]+(?:$|.*[^\s]+$)/,
-                    message: "Sin espacios al principio, ni al final",
+                    message:
+                      "No se pueden espacios ni al principio, ni al final",
                   },
                 })}
                 type="search"
@@ -105,12 +102,14 @@ function MainContainer() {
                 name="nameMovie"
                 autoFocus
               />
-              {<p>{errors?.nameMovie?.message}</p>}
             </form>
+            {<p className="status">{errors?.nameMovie?.message}</p>}
           </div>
-          {hasError && <p>no hay ninguna pelicula con ese nombre</p>}
+          {hasError && (
+            <p className="error">No hay ninguna pelicula con ese nombre</p>
+          )}
           {isLoading ? (
-            <p>Loading</p>
+            <Loading />
           ) : (
             <div className="content-card">
               {movies &&

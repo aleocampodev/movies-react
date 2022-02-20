@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams,Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 //import {  useParams, Link } from "react-router-dom";
 import "./movie-detail.css";
 
 const MovieDetail = () => {
-  
   const [movieDetail, setMovieDetail] = useState({});
 
   const [status, setStatus] = useState(200);
@@ -18,7 +17,6 @@ const MovieDetail = () => {
       `https://imdb-api.com/en/API/Title/k_9ggk3275/${movieId}`
     );
     const resJSON = await res.json();
-    console.log(resJSON, "holajson2");
     setMovieDetail(resJSON);
   };
 
@@ -26,7 +24,6 @@ const MovieDetail = () => {
     getDetailMovie();
   }, [movieId]);
 
-  console.log(movieDetail["actorList"], "hola");
   return (
     <div className="movie-detail">
       <h2>{movieDetail.title}</h2>
