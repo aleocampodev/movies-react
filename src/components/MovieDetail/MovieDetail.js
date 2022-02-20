@@ -6,8 +6,6 @@ import "./movie-detail.css";
 const MovieDetail = () => {
   const [movieDetail, setMovieDetail] = useState({});
 
-  const [status, setStatus] = useState(200);
-
   const { movieId } = useParams();
 
   const getDetailMovie = async () => {
@@ -22,7 +20,7 @@ const MovieDetail = () => {
 
   useEffect(() => {
     getDetailMovie();
-  }, [movieId]);
+  }, []);
 
   return (
     <div className="movie-detail">
