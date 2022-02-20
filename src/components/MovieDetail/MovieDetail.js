@@ -20,7 +20,7 @@ const MovieDetail = () => {
 
   useEffect(() => {
     getDetailMovie();
-  }, []);
+  }, [movieId]);
 
   return (
     <div className="movie-detail">
