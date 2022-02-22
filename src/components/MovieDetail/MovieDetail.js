@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-//import {  useParams, Link } from "react-router-dom";
 import "./movie-detail.css";
 
 const MovieDetail = () => {
@@ -11,8 +10,7 @@ const MovieDetail = () => {
   const getDetailMovie = async () => {
     // search
     const res = await fetch(
-      //`https://imdb-api.com/en/API/SearchMovie/k_9ggk3275/tt0411008`
-      `https://imdb-api.com/en/API/Title/k_9ggk3275/${movieId}`
+      `https://imdb-api.com/en/API/Title/k_ymjg9h02/${movieId}`
     );
     const resJSON = await res.json();
     setMovieDetail(resJSON);
@@ -24,22 +22,48 @@ const MovieDetail = () => {
 
   return (
     <div className="movie-detail">
-      <h2>{movieDetail.title}</h2>
-      <p>{movieDetail.releaseDate}</p>
-      <p>{movieDetail.plot}</p>
-      <p>{movieDetail.directors}</p>
-      <p>{movieDetail.runtimeStr}</p>
-      <img src={movieDetail.image} alt={movieDetail.title} />
-
-      {movieDetail.actorList?.map((element) => (
-        <div key={element.id}>
-          <p>{element.name}</p>
-          <img src={element.image} alt={element.name} />
+      <div className="header">
+        <h2>{movieDetail.title}</h2>
+        <div className="header-link">
+          <Link className="link" to="/">Return</Link>
         </div>
-      ))}
-      <p>{movieDetail.awards}</p>
-      <p>{movieDetail.companies}</p>
-      <Link to="/">Volver</Link>
+      </div>
+
+      <p>
+        <strong>Release date: </strong>
+        {movieDetail.releaseDate}
+      </p>
+      <p>
+        <strong>Resume: </strong>
+        {movieDetail.plot}
+      </p>
+      <p>
+        <strong>Director: </strong>
+        {movieDetail.directors}
+      </p>
+      <p>
+        <strong>Duration time: </strong>
+        {movieDetail.runtimeStr}
+      </p>
+      <p>
+        <strong>Awards: </strong>
+        {movieDetail.awards}
+      </p>
+      <p>
+        <strong>Companies that participated in this film: </strong>
+        {movieDetail.companies}
+      </p>
+
+      <img src={movieDetail.image} alt={movieDetail.title} />
+      <h3>Actors</h3>
+      <div className="actors">
+        {movieDetail.actorList?.map((element) => (
+          <div key={element.id} className="actors-list">
+            <img src={element.image} alt={element.name} />
+            <p>{element.name}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

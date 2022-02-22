@@ -13,10 +13,6 @@
   margin-top: 53px;
 }
 
-.link {
-  text-decoration: none;
-}
-
 .form-input form {
   display: grid;
   place-items: center;

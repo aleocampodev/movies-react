@@ -1,28 +1,30 @@
 .card-container {
-  width: 50%;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-  height: auto;
-  margin: 0 auto;
-  transition: all .2s ease-in-out;
+  border-radius: 12px;
+  height: 525px;
+  margin: 15px;
+  transition: all 0.2s ease-in-out;
 }
 
-.card-container:hover{
+.card-container:hover {
   transform: scale(1.1);
 }
-
-
 
 .card-image {
   object-fit: cover;
   width: 100%;
+  height: 70%;
   border-radius: 10px;
 }
 
 .card-content {
-  padding: 5px;
+  padding: 5px 5px 0;
+  width: 100%;
+  height: 155px;
 }
 .card-content p {
   color: black;
   text-align: center;
+  font-size: 18px;
 }

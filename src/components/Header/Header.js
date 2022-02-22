@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <header className="App-header">
-        <h1 className="title">Buscador de peliculas</h1>
+        <h1 className="title">Movie Search</h1>
         <img src={logo} className="App-logo" alt="logo" />
       </header>
     </>

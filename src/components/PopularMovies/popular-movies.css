@@ -1,0 +1,33 @@
+h3 {
+  margin-bottom: 53px;
+  margin-top: 53px;
+  text-align: center;
+}
+.popular-movie {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  /*height: 100%;*/
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 57px;
+}
+
+.movie-container {
+  display: flex;
+  margin-bottom: 15px;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 215px;
+}
+
+.movie-image {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  object-position: cover;
+}
+
+.movie-content {
+  padding: 15px;
+}

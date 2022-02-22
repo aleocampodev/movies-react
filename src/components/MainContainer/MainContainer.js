@@ -1,74 +1,70 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loading from "../Loading/Loading";
 import Card from "../Card/Card";
 import "./main-container.css";
+import PopularMovies from "../PopularMovies/PopularMovies";
 
 function MainContainer() {
   const [movies, setMovies] = useState([]);
-
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
-  const [isLoading, setIsLoading] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  const spiderMovie = async () => {
-    try {
-      const res = await fetch(
-        `https://imdb-api.com/en/API/SearchMovie/k_eq0u6qz8/spider%20man`
-      );
-      const resJSON = await res.json();
-      
-      setMovies(resJSON.results);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [status, setStatus] = useState({
+    loading: false,
+    server: false,
+    noData: false,
+  });
+  //const [hasError, setHasError] = useState(false);
 
   const getMovie = (nameMovie) => {
-    setIsLoading(true);
-    setHasError(false);
-    fetch(`https://imdb-api.com/en/API/SearchMovie/k_9ggk3275/${nameMovie}`)
+    setStatus({ loading: true, server: false, noData: false });
+    fetch(`https://imdb-api.com/en/API/SearchMovie/k_ymjg9h02/${nameMovie}`)
       .then((res) => {
-        
         return res.json();
       })
       .then((data) => {
-        
         setMovies(data.results);
-        setIsLoading(false);
-        setHasError(false);
-        if (data.results.length === 0 || data.results === null) {
-          setHasError(true);
-          setIsLoading(false);
-          
+        setStatus({
+          loading: false,
+          server: false,
+          noData: false,
+        });
+        if (!movies || movies.length === 0 || movies === null) {
+          console.log(movies, movies === null, "hola movies");
+          setStatus({
+            loading: false,
+            server: false,
+            noData: true,
+          });
         }
         reset();
       })
       .catch((error) => {
         console.log(error);
-        setHasError(true);
-        setIsLoading(false);
+        setStatus({
+          loading: false,
+          server: true,
+          noData: false,
+        });
+        reset();
       });
 
-    setHasError(false);
-    setIsLoading(true);
+    setStatus({
+      loading: true,
+      server: false,
+      noData: false,
+    });
   };
 
   const onSubmit = (value) => {
-    
     getMovie(value.nameMovie);
   };
-
-  useEffect(() => {
-    spiderMovie();
-  }, []);
 
   return (
     <>
@@ -81,34 +77,37 @@ function MainContainer() {
                 {...register("nameMovie", {
                   minLength: {
                     value: 1,
-                    message: "Debe tener como mínimo 1 caracter",
+                    message: "Must have a maximum of 1 character",
                   },
                   maxLength: {
                     value: 12,
-                    message: "Debe tener como máximo 12 caraceteres",
+                    message: "Must have a maximum of 12 characters",
                   },
                   pattern: {
                     value: /([a-zA-Z0-9\s]){1,15}[^\s]/,
-                    message: "El formato debe ser alfanumérico",
+                    message: "The format must be alphanumeric",
                   },
                   pattern: {
                     value: /^[^\s]+(?:$|.*[^\s]+$)/,
                     message:
-                      "No se pueden espacios ni al principio, ni al final",
+                      "You can not leave spaces, neither at the beginning, nor at the end",
                   },
                 })}
                 type="search"
-                placeholder="Buscar película"
+                placeholder="Search"
                 name="nameMovie"
                 autoFocus
               />
             </form>
             {<p className="status">{errors?.nameMovie?.message}</p>}
           </div>
-          {hasError && (
-            <p className="error">No hay ninguna pelicula con ese nombre</p>
+          {movies.length === 0 && !status.loading && <PopularMovies />}
+
+          {movies.length === 0 && status.noData && (
+            <p className="error">There is no movie with that name</p>
           )}
-          {isLoading ? (
+          {status.server && <p className="error">Error server</p>}
+          {status.loading ? (
             <Loading />
           ) : (
             <div className="content-card">
