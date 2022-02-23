@@ -6,7 +6,7 @@ h3 {
   font-family: "Open Sans", sans-serif;
 }
 .popular-container {
-  /*background-color: aqua;*/
+  height: 100%;
 }
 .popular-movie {
   display: grid;
