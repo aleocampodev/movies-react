@@ -23,7 +23,11 @@
   padding: 15px;
   border-radius: 15px;
 }
-
+.form-input form input:focus {
+  outline: none;
+  border: 2px solid orange;
+  border-radius: 15px;
+}
 .form-input form input::placeholder {
   color: gray;
 }
@@ -31,17 +35,18 @@
 .form-input .status {
   margin-left: 123px;
   color: red;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .box-right {
   flex: 1;
   height: 100vh;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 55px;
+  margin-right: 55px;
 }
 
 .error {
   text-align: center;
   margin-top: 53px;
+  font-size: 20px;
 }

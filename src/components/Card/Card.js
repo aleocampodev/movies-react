@@ -1,5 +1,6 @@
 import React from "react";
 import "./card.css";
+import "../../queries.css";
 
 const Card = ({ image, title, description }) => {
   return (

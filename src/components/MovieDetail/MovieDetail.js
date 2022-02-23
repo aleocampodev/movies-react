@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./movie-detail.css";
+import "../../queries.css";
 
 const MovieDetail = () => {
   const [movieDetail, setMovieDetail] = useState({});
@@ -22,39 +23,50 @@ const MovieDetail = () => {
 
   return (
     <div className="movie-detail">
-      <div className="header">
-        <h2>{movieDetail.title}</h2>
-        <div className="header-link">
-          <Link className="link" to="/">Return</Link>
+      <div className="movie-detail-wrapper">
+        <div className="header">
+          <h2>{movieDetail.title}</h2>
+          <div className="header-link">
+            <Link className="link" to="/">
+              Return
+            </Link>
+          </div>
+        </div>
+        <div className="movie-detail-container">
+          <img
+            src={movieDetail.image}
+            alt={movieDetail.title}
+            className="movie-detail-image"
+          />
+          <div className="movie-detail-text">
+            <p>
+              <strong>Release date: </strong>
+              {movieDetail.releaseDate}
+            </p>
+            <p>
+              <strong>Resume: </strong>
+              {movieDetail.plot}
+            </p>
+            <p>
+              <strong>Director: </strong>
+              {movieDetail.directors}
+            </p>
+            <p>
+              <strong>Duration time: </strong>
+              {movieDetail.runtimeStr}
+            </p>
+            <p>
+              <strong>Awards: </strong>
+              {movieDetail.awards}
+            </p>
+            <p>
+              <strong>Companies that participated in this film: </strong>
+              {movieDetail.companies}
+            </p>
+          </div>
         </div>
       </div>
 
-      <p>
-        <strong>Release date: </strong>
-        {movieDetail.releaseDate}
-      </p>
-      <p>
-        <strong>Resume: </strong>
-        {movieDetail.plot}
-      </p>
-      <p>
-        <strong>Director: </strong>
-        {movieDetail.directors}
-      </p>
-      <p>
-        <strong>Duration time: </strong>
-        {movieDetail.runtimeStr}
-      </p>
-      <p>
-        <strong>Awards: </strong>
-        {movieDetail.awards}
-      </p>
-      <p>
-        <strong>Companies that participated in this film: </strong>
-        {movieDetail.companies}
-      </p>
-
-      <img src={movieDetail.image} alt={movieDetail.title} />
       <h3>Actors</h3>
       <div className="actors">
         {movieDetail.actorList?.map((element) => (

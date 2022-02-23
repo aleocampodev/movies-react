@@ -1,17 +1,22 @@
 h3 {
-  margin-bottom: 53px;
-  margin-top: 53px;
+  margin-bottom: 73px;
+  margin-top: 93px;
   text-align: center;
+  font-size: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+.popular-container {
+  /*background-color: aqua;*/
 }
 .popular-movie {
   display: grid;
   place-items: center;
   width: 100%;
-  /*height: 100%;*/
+  height: 100%;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 1fr 1fr 1fr;
-  padding-bottom: 57px;
+  margin-bottom: 57px;
 }
 
 .movie-container {
@@ -19,7 +24,8 @@ h3 {
   margin-bottom: 15px;
   border-radius: 22px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 215px;
+  height: 255px;
+  background-color: rgba(31, 31, 31, 1);
 }
 
 .movie-image {
@@ -29,5 +35,10 @@ h3 {
 }
 
 .movie-content {
-  padding: 15px;
+  padding: 10px;
+  color: white;
+}
+
+.movie-content h4 {
+  font-size: 18px;
 }

@@ -6,6 +6,7 @@ import Loading from "../Loading/Loading";
 import Card from "../Card/Card";
 import "./main-container.css";
 import PopularMovies from "../PopularMovies/PopularMovies";
+import "../../queries.css";
 
 function MainContainer() {
   const [movies, setMovies] = useState([]);
@@ -35,8 +36,7 @@ function MainContainer() {
           server: false,
           noData: false,
         });
-        if (!movies || movies.length === 0 || movies === null) {
-          console.log(movies, movies === null, "hola movies");
+        if (!movies.length) {
           setStatus({
             loading: false,
             server: false,
@@ -71,6 +71,7 @@ function MainContainer() {
       <div className="main-container">
         <div className="box-right">
           <Header />
+
           <div className="form-input">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
@@ -84,7 +85,7 @@ function MainContainer() {
                     message: "Must have a maximum of 12 characters",
                   },
                   pattern: {
-                    value: /([a-zA-Z0-9\s]){1,15}[^\s]/,
+                    value: /[A-Za-z0-9_]/,
                     message: "The format must be alphanumeric",
                   },
                   pattern: {
@@ -101,12 +102,14 @@ function MainContainer() {
             </form>
             {<p className="status">{errors?.nameMovie?.message}</p>}
           </div>
-          {movies.length === 0 && !status.loading && <PopularMovies />}
+          {!movies.length && !status.loading && !status.noData && (
+            <PopularMovies />
+          )}
 
-          {movies.length === 0 && status.noData && (
+          {!movies.length && status.noData && (
             <p className="error">There is no movie with that name</p>
           )}
-          {status.server && <p className="error">Error server</p>}
+          {status.server && <p className="error">Server Error</p>}
           {status.loading ? (
             <Loading />
           ) : (

@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/moviesLogo.jpeg";
 import "./header.css";
+import "../../queries.css";
 
 const Header = () => {
   return (

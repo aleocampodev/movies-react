@@ -1,0 +1,476 @@
+@media (min-width: 220px) {
+  div.box-right {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  div.content-card,
+  div.popular-movie {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: none;
+  }
+
+  div.movie-content {
+    font-size: 12px;
+  }
+
+  div.movie-content h4 {
+    font-size: 13px;
+  }
+
+  div.header-link {
+    right: -259px;
+  }
+
+  div.actors {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+  }
+
+  div.actors-list img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+  }
+
+  img.movie-detail-image {
+    width: 255px;
+    height: 455px;
+  }
+
+  div.movie-detail-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1.title {
+    font-size: 25px;
+  }
+
+  img.App-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  div.box-right h3 {
+    font-size: 22px;
+  }
+
+  div.movie-container {
+    height: 195px;
+  }
+}
+
+@media (min-width: 390px) {
+  div.content-card,
+  div.popular-movie {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: none;
+  }
+
+  div.header-link {
+    right: 10px;
+  }
+
+  div.actors {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+  }
+
+  h1.title {
+    font-size: 25px;
+  }
+
+  img.App-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  div.box-right h3 {
+    font-size: 22px;
+  }
+  div.actors-list img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+  }
+
+  div.movie-container {
+    width: 100%;
+  }
+
+  div.movie-content {
+    font-size: 17px;
+  }
+
+  img.movie-detail-image {
+    width: 255px;
+    height: 455px;
+  }
+
+  div.movie-content h4 {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 505px) {
+  div.content-card,
+  div.popular-movie {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: none;
+  }
+
+  div.header-link {
+    right: 10px;
+  }
+
+  div.actors {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+  }
+
+  div.actors-list img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+  }
+
+  img.movie-detail-image {
+    width: 255px;
+    height: 455px;
+  }
+
+  div.movie-content h4 {
+    font-size: 19px;
+  }
+
+  div.movie-container p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 640px) {
+  div.content-card,
+  div.popular-movie {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: none;
+  }
+
+  div.header-link {
+    right: 10px;
+  }
+
+  div.actors {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  div.actors-list img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+  }
+
+  div.movie-container {
+    width: 80%;
+  }
+
+  div.movie-content {
+    font-size: 18px;
+  }
+
+  img.movie-detail-image {
+    width: 355px;
+    height: 355px;
+  }
+
+  div.movie-content h4 {
+    font-size: 19px;
+  }
+
+  div.movie-container p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 784px) {
+  div.content-card,
+  div.popular-movie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.actors {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  div.actors-list img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+  }
+
+  img.movie-detail-image {
+    width: 355px;
+    height: 355px;
+  }
+
+  div.movie-content h4 {
+    font-size: 17px;
+  }
+
+  div.movie-container p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  div.content-card,
+  div.popular-movie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.box-right {
+    margin-left: 53px;
+    margin-right: 53px;
+  }
+
+  div.movie-container {
+    width: 100%;
+  }
+
+  div.movie-content {
+    font-size: 20px;
+  }
+
+  div.movie-content h4 {
+    font-size: 19px;
+  }
+
+  div.movie-container p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  div.content-card,
+  div.popular-movie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  div.box-right {
+    margin-left: 53px;
+    margin-right: 53px;
+  }
+
+  div.movie-content {
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+  }
+  div.movie-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  img.movie-detail-image {
+    width: 455px;
+    height: 755px;
+    margin-left: 55px;
+  }
+
+  div.actors {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 53px;
+  }
+
+  div.actors-list img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+  }
+
+  div.header-link {
+    background-color: orange;
+    cursor: pointer;
+    padding: 15px;
+    width: 105px;
+    border-radius: 12px;
+    display: flex;
+    position: absolute;
+    top: 35px;
+    right: 350px;
+  }
+
+  div.header-link:hover {
+    background-color: orange;
+    border: 2px solid orange;
+    color: red;
+  }
+
+  div.link {
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  div.link:hover {
+    color: black;
+  }
+
+  div.movie-detail div.movie-detail-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+
+  div.movie-detail-text {
+    margin: 45px;
+  }
+
+  div.movie-detail h3 {
+    margin-bottom: 3px;
+    margin-top: 35px;
+  }
+
+  div.App-header {
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  div.movie-content {
+    font-size: 16px;
+  }
+
+  div.movie-content h4 {
+    font-size: 20px;
+  }
+
+  div.movie-container {
+    height: 255px;
+  }
+
+  h1.title {
+    font-size: 35px;
+  }
+
+  div.box-right h3 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1536px) {
+  div.movie-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  img.movie-detail-image {
+    width: 455px;
+    height: 755px;
+  }
+
+  div.actors {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 53px;
+  }
+
+  h1.title {
+    font-size: 35px;
+  }
+
+  div.actors-list img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+  }
+
+  div.header-link {
+    background-color: #0f0f97;
+    cursor: pointer;
+    padding: 15px;
+    width: 95px;
+    border-radius: 12px;
+    display: flex;
+    position: absolute;
+    right: 150px;
+  }
+
+  div.header-link:hover {
+    background-color: white;
+    border: 2px solid #0f0f97;
+  }
+
+  div.link {
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  div.link:hover {
+    color: black;
+  }
+
+  div.movie-detail-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  div.movie-detail-text {
+    margin: 45px;
+  }
+
+  div.movie-detail h3 {
+    margin-bottom: 3px;
+    margin-top: 35px;
+  }
+
+  div.movie-content {
+    font-size: 16px;
+  }
+
+  div.movie-content h4 {
+    font-size: 20px;
+  }
+}
