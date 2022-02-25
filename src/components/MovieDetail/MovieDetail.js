@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import "./movie-detail.css";
 import "../../queries.css";
 
 const MovieDetail = () => {
   const [movieDetail, setMovieDetail] = useState({});
+  const navigate = useNavigate();
+
+  const handleReturn = () => {
+    navigate(-1);
+  };
 
   const { movieId } = useParams();
+
+  console.log(useParams(), "hola params");
 
   const getDetailMovie = async () => {
     // search
     const res = await fetch(
-      `https://imdb-api.com/en/API/Title/k_ymjg9h02/${movieId}`
+      `https://imdb-api.com/en/API/Title/k_9u3ckjd1/${movieId}`
     );
     const resJSON = await res.json();
     setMovieDetail(resJSON);
@@ -27,9 +34,9 @@ const MovieDetail = () => {
         <div className="header">
           <h2>{movieDetail.title}</h2>
           <div className="header-link">
-            <Link className="link" to="/">
+            <button className="link" onClick={handleReturn}>
               Return
-            </Link>
+            </button>
           </div>
         </div>
         <div className="movie-detail-container">

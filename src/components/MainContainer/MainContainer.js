@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Loading from "../Loading/Loading";
 import Card from "../Card/Card";
@@ -21,11 +21,15 @@ function MainContainer() {
     server: false,
     noData: false,
   });
+  const [query, setQuery] = useSearchParams();
+
+  console.log(typeof query.get("search"), query.get("search"), "hola query");
+
   //const [hasError, setHasError] = useState(false);
 
   const getMovie = (nameMovie) => {
     setStatus({ loading: true, server: false, noData: false });
-    fetch(`https://imdb-api.com/en/API/SearchMovie/k_ymjg9h02/${nameMovie}`)
+    fetch(`https://imdb-api.com/en/API/SearchMovie/k_9u3ckjd1/${nameMovie}`)
       .then((res) => {
         return res.json();
       })
@@ -43,7 +47,6 @@ function MainContainer() {
             noData: true,
           });
         }
-        reset();
       })
       .catch((error) => {
         console.log(error);
@@ -52,18 +55,19 @@ function MainContainer() {
           server: true,
           noData: false,
         });
-        reset();
       });
-
-    setStatus({
-      loading: true,
-      server: false,
-      noData: false,
-    });
   };
 
+  useEffect(() => {
+    if (query.get("search")) {
+      getMovie(query.get("search"));
+    }
+  }, []);
+
   const onSubmit = (value) => {
+    console.log("hola jwiw", value.nameMovie);
     getMovie(value.nameMovie);
+    setQuery({ search: value.nameMovie });
   };
 
   return (
@@ -97,16 +101,17 @@ function MainContainer() {
                 type="search"
                 placeholder="Search"
                 name="nameMovie"
+                disabled={status.loading}
                 autoFocus
               />
             </form>
             {<p className="status">{errors?.nameMovie?.message}</p>}
           </div>
-          {!movies.length && !status.loading && !status.noData && (
+          {!status.loading && !status.noData && !movies.length && (
             <PopularMovies />
           )}
 
-          {!movies.length && status.noData && (
+          {!status.loading && status.noData && !movies.length && (
             <p className="error">There is no movie with that name</p>
           )}
           {status.server && <p className="error">Server Error</p>}

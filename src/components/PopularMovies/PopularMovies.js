@@ -6,16 +6,37 @@ const PopularMovies = () => {
   const [popularMovies, setPopularMovies] = useState([]);
 
   const getPopularMovies = async () => {
+    let hours = 24;
+    let now = new Date().getTime();
+    const popularMovie = localStorage.getItem("popularMovie");
+
+    if (popularMovie !== null) {
+      setPopularMovies(JSON.parse(popularMovie));
+      if (now && popularMovie > hours) {
+        localStorage.clear();
+      }
+    } else {
+      const res = await fetch(
+        `https://imdb-api.com/en/API/MostPopularMovies/k_9u3ckjd1`
+      );
+      const resJSON = await res.json();
+      console.log(resJSON, "holajson");
+      setPopularMovies(resJSON.items);
+      localStorage.setItem("popularMovie", JSON.stringify(resJSON.items));
+    }
+  };
+
+  /*const getPopularMovies = async () => {
     try {
       const res = await fetch(
-        `https://imdb-api.com/en/API/MostPopularMovies/k_eq0u6qz8`
+        `https://imdb-api.com/en/API/MostPopularMovies/k_9u3ckjd1`
       );
       const resJSON = await res.json();
       setPopularMovies(resJSON.items);
     } catch (error) {
       console.log(error);
     }
-  };
+  };*/
 
   useEffect(() => {
     getPopularMovies();
