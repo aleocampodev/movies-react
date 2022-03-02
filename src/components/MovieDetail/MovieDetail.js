@@ -4,11 +4,12 @@ import "./movie-detail.css";
 import "../../queries.css";
 
 const MovieDetail = () => {
-  const [movieDetail, setMovieDetail] = useState({});
+  const [movieDetail, setMovieDetail] = useState([]);
   const navigate = useNavigate();
 
   const handleReturn = () => {
     navigate(-1);
+    localStorage.clear();
   };
 
   const { movieId } = useParams();
@@ -16,12 +17,26 @@ const MovieDetail = () => {
   console.log(useParams(), "hola params");
 
   const getDetailMovie = async () => {
-    // search
-    const res = await fetch(
-      `https://imdb-api.com/en/API/Title/k_9u3ckjd1/${movieId}`
-    );
-    const resJSON = await res.json();
-    setMovieDetail(resJSON);
+    const detailMovie = localStorage.getItem("detailMovie");
+
+    if (detailMovie !== null) {
+      setMovieDetail(JSON.parse(detailMovie));
+      /*const findMovieDetail = movieDetail.find(
+        (element) => element.id === element.id
+      );
+      setMovieDetail(JSON.parse(findMovieDetail));*/
+    } else {
+      // search
+      const res = await fetch(
+        `https://imdb-api.com/en/API/Title/k_wwo8vztv/${movieId}`
+      );
+      const resJSON = await res.json();
+      console.log("hola JSOOON", resJSON);
+      setMovieDetail(resJSON);
+      /* setMovieDetail([...movieDetail, resJSON]);
+      console.log(movieDetail, "hola");*/
+      localStorage.setItem("detailMovie", JSON.stringify(resJSON));
+    }
   };
 
   useEffect(() => {
