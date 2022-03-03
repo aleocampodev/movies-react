@@ -28,7 +28,7 @@ function MainContainer() {
   //const [hasError, setHasError] = useState(false);
 
   const getMovie = (nameMovie) => {
-    const moviesStorage = localStorage.getItem("moviesStorage");
+    const moviesStorage = localStorage.getItem("moviesStorage" + nameMovie);
 
     if (moviesStorage !== null) {
       setMovies(JSON.parse(moviesStorage));
@@ -40,7 +40,7 @@ function MainContainer() {
           return res.json();
         })
         .then((data) => {
-          //console.log("movies", data.results);
+          console.log("movies", data.results);
           if (!data.results || !data.results.length) {
             setStatus({
               loading: false,
@@ -52,7 +52,10 @@ function MainContainer() {
 
           setMovies(data.results);
           //setMovies([...movies, ...data.results]);
-          //localStorage.setItem("moviesStorage", JSON.stringify(data.results));
+          localStorage.setItem(
+            "moviesStorage" + nameMovie,
+            JSON.stringify(data.results)
+          );
           //setMovies([...movies, ...data.results]);
           //console.log(data.results, "movies");
           setStatus({

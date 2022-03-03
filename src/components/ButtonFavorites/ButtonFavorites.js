@@ -7,6 +7,19 @@ const ButtonFavorites = ({ image, title, description, id }) => {
 
   const [isFavorite, setIsFavorite] = useState(false);
 
+  useEffect(() => {
+    const localFavorites = localStorage.getItem("favorites");
+    if (localFavorites) {
+      const favs = JSON.parse(localFavorites);
+      setListFavorites(favs);
+      const findMovie = favs.find((element) => element.id === id);
+
+      if (findMovie) {
+        setIsFavorite(true);
+      }
+    }
+  }, []);
+
   /*useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(addFavorites));
   }, [addFavorites]);*/
@@ -22,7 +35,6 @@ const ButtonFavorites = ({ image, title, description, id }) => {
 
   const addFavoritesMovies = () => {
     console.log(typeof listFavorites, "list favoritos");
-    const getMovie = JSON.parse(localStorage.getItem("favorites"));
 
     if (listFavorites !== null) {
       const findMovie = listFavorites.find(
@@ -31,44 +43,40 @@ const ButtonFavorites = ({ image, title, description, id }) => {
       console.log(
         listFavorites,
         findMovie,
-        getMovie,
+
         "hola moviess",
         newFavoriteMovie.id
       );
 
       if (findMovie) {
-        localStorage.setItem(
-          "favorites",
-          JSON.stringify(
-            listFavorites.filter(
-              (element) => element.id !== newFavoriteMovie.id
-            )
-          )
+        const removeItem = listFavorites.filter(
+          (element) => element.id !== newFavoriteMovie.id
         );
+
+        setListFavorites(removeItem);
+        console.log("se encuentra item");
         setIsFavorite(false);
       } else {
-        setListFavorites([...getMovie, newFavoriteMovie]);
-        localStorage.setItem("favorites", JSON.stringify(listFavorites));
+        setListFavorites([...listFavorites, newFavoriteMovie]);
+        //localStorage.setItem("favorites", JSON.stringify(listFavorites));
+
+        console.log("localstorage st 1");
         setIsFavorite(true);
       }
     } else {
       setListFavorites([...listFavorites, newFavoriteMovie]);
-      localStorage.setItem("favorites", JSON.stringify(listFavorites));
+      //localStorage.setItem("favorites", JSON.stringify(listFavorites));
       setIsFavorite(true);
       console.log(listFavorites, "hola lista");
     }
   };
 
   useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(listFavorites));
-  }, [listFavorites]);
-
-  useEffect(() => {
-    const getMovie = JSON.parse(localStorage.getItem("favorites"));
-    if (getMovie !== null) {
-      setListFavorites(getMovie);
+    if (listFavorites.length > 0) {
+      localStorage.setItem("favorites", JSON.stringify(listFavorites));
+      console.log("hola efecto", listFavorites);
     }
-  }, []);
+  }, [listFavorites]);
 
   return (
     <>
