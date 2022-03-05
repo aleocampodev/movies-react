@@ -9,8 +9,10 @@ const ButtonFavorites = ({ image, title, description, id }) => {
 
   useEffect(() => {
     const localFavorites = localStorage.getItem("favorites");
+
     if (localFavorites) {
       const favs = JSON.parse(localFavorites);
+      console.log(favs, "hola favs");
       setListFavorites(favs);
       const findMovie = favs.find((element) => element.id === id);
 
@@ -35,8 +37,10 @@ const ButtonFavorites = ({ image, title, description, id }) => {
 
   const addFavoritesMovies = () => {
     console.log(typeof listFavorites, "list favoritos");
+    const getList = localStorage.getItem("favorites");
+    const getMovie = JSON.parse(getList);
 
-    if (listFavorites !== null) {
+    if (getMovie !== null) {
       const findMovie = listFavorites.find(
         (element) => element.id === newFavoriteMovie.id
       );
@@ -57,7 +61,7 @@ const ButtonFavorites = ({ image, title, description, id }) => {
         console.log("se encuentra item");
         setIsFavorite(false);
       } else {
-        setListFavorites([...listFavorites, newFavoriteMovie]);
+        setListFavorites([...getMovie, newFavoriteMovie]);
         //localStorage.setItem("favorites", JSON.stringify(listFavorites));
 
         console.log("localstorage st 1");

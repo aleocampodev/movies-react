@@ -145,6 +145,9 @@ function MainContainer() {
             </div>
           )}
         </div>
+        <button>
+          <Link to="/list-favorites">See list Favorites</Link>
+        </button>
       </div>
     </>
   );
