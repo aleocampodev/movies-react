@@ -5,7 +5,6 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MovieDetail from "./components/MovieDetail/MovieDetail";
-import MainContainer from "./components/MainContainer/MainContainer";
 import ViewFavorites from "./components/ViewFavorites/ViewFavorites";
 
 ReactDOM.render(
@@ -13,6 +12,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/:movieId" element={<MovieDetail />} />
+
       <Route path="/list-favorites" element={<ViewFavorites />} />
       <Route path="*" element={<div>404-not found</div>} />
     </Routes>

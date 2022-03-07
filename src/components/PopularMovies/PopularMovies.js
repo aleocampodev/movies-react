@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./popular-movies.css";
 import "../../queries.css";
+import { Link } from "react-router-dom";
 
 const PopularMovies = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -54,20 +55,22 @@ const PopularMovies = () => {
               .filter((item) => item.rank <= 30)
               .map((item) => {
                 return (
-                  <div key={item.id} className="movie-container">
-                    <img
-                      className="movie-image"
-                      src={item.image}
-                      alt={item.title}
-                    />
-                    <div className="movie-content">
-                      <h4>{item.title}</h4>
-                      <p>{item.year}</p>
-                      <p>
-                        <strong>Crew:</strong> {item.crew}
-                      </p>
+                  <Link to={`/${item.id}`}>
+                    <div key={item.id} className="movie-container">
+                      <img
+                        className="movie-image"
+                        src={item.image}
+                        alt={item.title}
+                      />
+                      <div className="movie-content">
+                        <h4>{item.title}</h4>
+                        <p>{item.year}</p>
+                        <p>
+                          <strong>Crew:</strong> {item.crew}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
         </div>
