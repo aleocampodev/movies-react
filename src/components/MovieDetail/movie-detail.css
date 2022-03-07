@@ -45,34 +45,6 @@
   font-size: 20px;
 }
 
-.header-link {
-  background-color: orange;
-  cursor: pointer;
-  padding: 15px;
-  width: 75px;
-  border-radius: 12px;
-  display: flex;
-  position: absolute;
-  top: 35px;
-  right: 350px;
-}
-
-.header-link:hover {
-  background-color: orange;
-  border: 2px solid orange;
-}
-
-.link {
-  text-decoration: none;
-  color: white;
-  margin: 0 auto;
-  width: 60%;
-}
-
-.link:hover {
-  color: black;
-}
-
 .movie-detail-container {
   display: flex;
   background-color: rgb(155, 155, 155);
@@ -89,4 +61,8 @@
   margin-bottom: 3px;
   margin-top: 35px;
   color: white;
+}
+
+button.linkMovieDetail {
+  top: -85px;
 }

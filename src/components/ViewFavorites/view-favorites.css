@@ -1,0 +1,59 @@
+.listFavoritesTitle,
+.textNoList {
+  width: 100%;
+  text-align: center;
+  margin: 52px;
+}
+
+.listFavorites {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 57px;
+}
+
+.listFavoritesCard {
+  display: flex;
+  margin-bottom: 15px;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 255px;
+  background-color: rgba(31, 31, 31, 1);
+  margin: 55px;
+}
+
+.listFavoritesImage {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  object-position: cover;
+}
+
+.listFavoritesContent {
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.listFavoritesContent h4 {
+  font-size: 18px;
+}
+
+.linkViewFavorites {
+  margin: 35px;
+  margin-left: 55px;
+}
+
+.linkViewFavorites-text {
+  margin-left: 15px;
+}
+svg.icon {
+  margin-left: 0;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
