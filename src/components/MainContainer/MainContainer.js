@@ -23,39 +23,56 @@ function MainContainer() {
   });
   const [query, setQuery] = useSearchParams();
 
-  console.log(typeof query.get("search"), query.get("search"), "hola query");
+  //console.log(typeof query.get("search"), query.get("search"), "hola query");
 
   //const [hasError, setHasError] = useState(false);
 
   const getMovie = (nameMovie) => {
-    setStatus({ loading: true, server: false, noData: false });
-    fetch(`https://imdb-api.com/en/API/SearchMovie/k_9u3ckjd1/${nameMovie}`)
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setMovies(data.results);
-        setStatus({
-          loading: false,
-          server: false,
-          noData: false,
-        });
-        if (!movies.length) {
+    const moviesStorage = localStorage.getItem("moviesStorage" + nameMovie);
+
+    if (moviesStorage !== null) {
+      setMovies(JSON.parse(moviesStorage));
+      //console.log("hola movie get");
+    } else {
+      setStatus({ loading: true, server: false, noData: false });
+      fetch(`https://imdb-api.com/en/API/SearchMovie/k_9ggk3275/${nameMovie}`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log("movies", data.results);
+          if (!data.results || !data.results.length) {
+            setStatus({
+              loading: false,
+              server: false,
+              noData: true,
+            });
+            return;
+          }
+
+          setMovies(data.results);
+          //setMovies([...movies, ...data.results]);
+          localStorage.setItem(
+            "moviesStorage" + nameMovie,
+            JSON.stringify(data.results)
+          );
+          //setMovies([...movies, ...data.results]);
+          //console.log(data.results, "movies");
           setStatus({
             loading: false,
             server: false,
-            noData: true,
+            noData: false,
           });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        setStatus({
-          loading: false,
-          server: true,
-          noData: false,
+        })
+        .catch((error) => {
+          console.log(error);
+          setStatus({
+            loading: false,
+            server: true,
+            noData: false,
+          });
         });
-      });
+    }
   };
 
   useEffect(() => {
@@ -64,8 +81,12 @@ function MainContainer() {
     }
   }, []);
 
+  /*useEffect(() => {
+    localStorage.setItem("moviesStorage", movies);
+  }, [movies]);*/
+
   const onSubmit = (value) => {
-    console.log("hola jwiw", value.nameMovie);
+    //console.log("hola jwiw", value.nameMovie);
     getMovie(value.nameMovie);
     setQuery({ search: value.nameMovie });
   };
@@ -120,11 +141,7 @@ function MainContainer() {
           ) : (
             <div className="content-card">
               {movies &&
-                movies.map((movie) => (
-                  <Link to={`/${movie.id}`} key={movie.id} className="link">
-                    <Card {...movie} />
-                  </Link>
-                ))}
+                movies.map((movie) => <Card {...movie} key={movie.id} />)}
             </div>
           )}
         </div>

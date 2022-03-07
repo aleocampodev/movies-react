@@ -6,18 +6,19 @@ const PopularMovies = () => {
   const [popularMovies, setPopularMovies] = useState([]);
 
   const getPopularMovies = async () => {
-    let hours = 24;
-    let now = new Date().getTime();
     const popularMovie = localStorage.getItem("popularMovie");
+    const timestamp = popularMovie & new Date(parseInt(popularMovie));
+    const now = new Date();
 
+    const dateTime = Math.round(now - timestamp) / (1000 * 60);
     if (popularMovie !== null) {
       setPopularMovies(JSON.parse(popularMovie));
-      if (now && popularMovie > hours) {
-        localStorage.clear();
+      if (dateTime <= 60) {
+        localStorage.remove("popularMovie");
       }
     } else {
       const res = await fetch(
-        `https://imdb-api.com/en/API/MostPopularMovies/k_9u3ckjd1`
+        `https://imdb-api.com/en/API/MostPopularMovies/k_wwo8vztv`
       );
       const resJSON = await res.json();
       console.log(resJSON, "holajson");
