@@ -93,6 +93,8 @@
   top: 0;
   margin-left: 10px;
   fill: none;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke: #ff0000;

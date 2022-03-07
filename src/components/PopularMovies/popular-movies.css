@@ -42,3 +42,12 @@ h3 {
 .movie-content h4 {
   font-size: 18px;
 }
+
+.link {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}

@@ -12,7 +12,6 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/:movieId" element={<MovieDetail />} />
-
       <Route path="/list-favorites" element={<ViewFavorites />} />
       <Route path="*" element={<div>404-not found</div>} />
     </Routes>
