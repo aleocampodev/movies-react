@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useParams, useNavigate } from "react-router-dom";
 import "./movie-detail.css";
 import "../../queries.css";
@@ -52,7 +51,7 @@ const MovieDetail = () => {
           <div className="header-link">
             <button
               onClick={handleReturn}
-              className="linkButton linkViewFavorites"
+              className="linkButton linkViewFavorites linkButtonMovie"
             >
               <svg
                 width="19px"

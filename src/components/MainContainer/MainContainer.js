@@ -116,8 +116,8 @@ function MainContainer() {
                     message: "Must have a maximum of 1 character",
                   },
                   maxLength: {
-                    value: 12,
-                    message: "Must have a maximum of 12 characters",
+                    value: 24,
+                    message: "Must have a maximum of 24 characters",
                   },
                   pattern: {
                     value: /[A-Za-z0-9_]/,

@@ -12,7 +12,7 @@
   height: 100%;
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   margin-bottom: 57px;
 }
 
@@ -20,9 +20,9 @@
   display: flex;
   margin-bottom: 15px;
   border-radius: 22px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 var(--card-shadow);
   height: 255px;
-  background-color: rgba(31, 31, 31, 1);
+  background-color: var(--bg-card);
   margin: 55px;
 }
 
@@ -34,7 +34,7 @@
 
 .listFavoritesContent {
   padding: 10px;
-  color: white;
+  color: var(--color-paragraph);
   display: flex;
   flex-direction: column;
 }
@@ -51,6 +51,7 @@
 .linkViewFavorites-text {
   margin-left: 15px;
 }
+
 svg.icon {
   margin-left: 0;
   position: relative;

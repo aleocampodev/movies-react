@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
+import "./button-favorites.css";
 
 const ButtonFavorites = ({ image, title, description, id }) => {
   const [listFavorites, setListFavorites] = useState([]);
