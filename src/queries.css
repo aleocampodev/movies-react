@@ -47,6 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 25px;
   }
 
   h1.title {
@@ -64,6 +65,113 @@
 
   div.movie-container {
     height: 195px;
+  }
+
+  div.linkButton {
+    padding: 0;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  div.header {
+    flex-direction: column;
+  }
+
+  div.header-link {
+    padding: 25px;
+    text-align: center;
+  }
+
+  button.linkViewFavorites {
+    padding-top: 15px;
+    margin-left: 75px;
+  }
+  div.header h2 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  div.header h2 {
+    margin-right: 0;
+  }
+
+  div.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  .linkButton:before {
+    position: relative;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail h3 {
+    margin: 23px;
+    font-size: 33px;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail h3 {
+    margin: 23px;
+    font-size: 33px;
+  }
+
+  div.movie-detail-container {
+    padding: 25px;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 9px;
+    padding-right: 9px;
   }
 }
 
@@ -120,6 +228,70 @@
 
   div.movie-content h4 {
     font-size: 17px;
+  }
+
+  div.linkButton {
+    padding: 0;
+  }
+
+  button.linkViewFavorites {
+    margin: 0;
+
+    padding-top: 15px;
+    margin-left: 85px;
+  }
+
+  div.header {
+    flex-direction: column;
+  }
+
+  div.header h2 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  div.header h2 {
+    margin-right: 0;
+  }
+
+  div.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  .linkButton:before {
+    position: relative;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail h3 {
+    margin: 23px;
+    font-size: 33px;
+  }
+
+  div.movie-detail-container {
+    padding: 25px;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 9px;
+    padding-right: 9px;
   }
 }
 
@@ -178,17 +350,49 @@
   }
 
   button.linkButtonMovie {
-    margin-top: 35px;
-    margin-left: 5px;
+    margin-top: 5px;
+    margin-left: 175px;
     padding-top: 19px;
   }
 
   div.header-link {
-    flex: 2;
+    flex: 3;
+    padding: 25px;
   }
 
-  div.header-link h2 {
-    text-align: none;
+  div.header {
+    flex-direction: column;
+  }
+
+  div.header h2 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  button.linkViewFavorites {
+    margin-left: 195px;
+  }
+
+  div.header h2 {
+    margin-right: 0;
+  }
+
+  div.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  div.linkViewFavorites {
+    margin: none;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
@@ -206,6 +410,7 @@
 
   div.header h2 {
     font-size: 39px;
+    padding-right: 255px;
   }
 
   div.actors {
@@ -259,6 +464,15 @@
     margin-top: 35px;
     margin-left: 5px;
     padding-top: 19px;
+    flex: 2;
+  }
+
+  div.linkButton {
+    padding: 0;
+  }
+
+  div.linkViewFavorites {
+    margin: none;
   }
 
   div.actors-list img {
@@ -268,6 +482,14 @@
   div.actors-list p {
     text-align: center;
     margin: 15px;
+  }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  button.linkButtonMovie {
+    margin-top: 0;
   }
 }
 
@@ -340,6 +562,17 @@
     text-align: center;
     margin: 33px;
   }
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  button.linkButtonMovie {
+    margin-top: 0;
+  }
+  div.movie-detail-wrapper {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -351,6 +584,7 @@
 
   div.header h2 {
     font-size: 50px;
+    padding-right: 355px;
   }
 
   div.movie-detail h3 {
@@ -406,6 +640,20 @@
     text-align: center;
     margin: 32px;
   }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  button.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -417,6 +665,11 @@
 
   div.header h2 {
     font-size: 52px;
+    padding-right: 255px;
+  }
+
+  div.header-link {
+    flex: 1;
   }
 
   div.box-right {
@@ -471,13 +724,13 @@
 
   div.link {
     text-decoration: none;
-    color: white;
+    color: var(--color-paragraph);
     margin: 0 auto;
     width: 60%;
   }
 
   div.link:hover {
-    color: black;
+    color: var(--color-title);
   }
 
   div.movie-detail div.movie-detail-container {
@@ -516,6 +769,20 @@
 
   div.box-right h3 {
     font-size: 30px;
+  }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  button.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 
@@ -570,6 +837,8 @@
     display: flex;
     position: absolute;
     right: 150px;
+
+    flex: 1;
   }
 
   div.header-link:hover {
@@ -608,5 +877,15 @@
 
   div.movie-content h4 {
     font-size: 20px;
+  }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
