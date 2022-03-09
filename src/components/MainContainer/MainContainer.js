@@ -95,7 +95,10 @@ function MainContainer() {
       <div className="main-container">
         <div className="box-right">
           <Header />
-          <Link to="/list-favorites" className="linkButton linkViewFavorites">
+          <Link
+            to="/list-favorites"
+            className="linkButton linkViewFavorites linkHeader"
+          >
             <span>See Favorites List</span>
             <svg
               width="19px"

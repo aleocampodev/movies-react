@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { useEffect } from "react/cjs/react.production.min";
 import "./star-rating.css";
 
-const StarRating = ({ setRating, rating, elementId }) => {
+const StarRating = ({ onChange, rating, elementId }) => {
   //const [listFavoritesStar, setListFavoritesStar] = useState(listFavorites);
   const [hover, setHover] = useState(null);
 
@@ -22,7 +22,7 @@ const StarRating = ({ setRating, rating, elementId }) => {
               type="radio"
               name="rating"
               value={ratingValue}
-              onClick={() => setRating(ratingValue, elementId)}
+              onClick={() => onChange(ratingValue, elementId)}
             />
             <FaStar
               className="star"

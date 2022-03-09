@@ -394,13 +394,40 @@
     padding-left: 45px;
     padding-right: 45px;
   }
+
+  header.App-header h1 {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+
+  div.movie-container {
+    width: 100%;
+  }
+
+  a.linkHeader {
+    top: -2px;
+  }
+
+  a.link {
+    width: 100%;
+  }
+
+  div.movie-content div.movie-content > * {
+    margin: 5px;
+  }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+    font-size: 25px;
+  }
 }
 
 @media (min-width: 640px) {
   div.content-card,
   div.popular-movie {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     place-items: none;
   }
 
@@ -491,9 +518,32 @@
   button.linkButtonMovie {
     margin-top: 0;
   }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  header.App-header h1 {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+
+  div.movie-container {
+    width: 100%;
+  }
+
+  a.linkHeader {
+    top: -2px;
+  }
+
+  div.movie-content > * {
+    margin: 5px;
+  }
 }
 
-@media (min-width: 784px) {
+@media (min-width: 870px) {
   div.content-card,
   div.popular-movie {
     display: grid;
@@ -572,6 +622,25 @@
   div.movie-detail-wrapper {
     padding-left: 35px;
     padding-right: 35px;
+  }
+
+  div.box-right h3 {
+    font-size: 25px;
+    margin: 35px;
+    text-align: center;
+  }
+
+  header.App-header h1 {
+    font-size: 45px;
+  }
+
+  a.linkHeader {
+    position: relative;
+    right: 65px;
+  }
+
+  div.movie-container {
+    width: 100%;
   }
 }
 
@@ -654,6 +723,30 @@
     padding-left: 35px;
     padding-right: 35px;
   }
+
+  header.App-header h1 {
+    font-size: 45px;
+  }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  a.link {
+    width: 100%;
+  }
+
+  div.movie-content > * {
+    font-size: 16px;
+    margin: 15px;
+  }
+
+  a.linkHeader {
+    position: relative;
+    right: 55px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -661,6 +754,10 @@
   div.popular-movie {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  div.App-header {
+    font-size: 55px;
   }
 
   div.header h2 {
@@ -746,13 +843,14 @@
     font-size: 33px;
   }
 
-  div.App-header {
-    font-size: 26px;
+  header.App-header h1 {
+    font-size: 46px;
     font-family: "Open Sans", sans-serif;
   }
 
   div.movie-content {
     font-size: 16px;
+    margin: 35px;
   }
 
   div.movie-content h4 {
@@ -783,6 +881,20 @@
   div.movie-detail-wrapper {
     padding-left: 45px;
     padding-right: 45px;
+  }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+  }
+
+  a.link {
+    width: 100%;
+  }
+
+  a.linkHeader {
+    position: relative;
+    right: 45px;
   }
 }
 
