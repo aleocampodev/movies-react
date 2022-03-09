@@ -8,16 +8,38 @@
 
 .movie-detail-wrapper {
   width: 100%;
-  background-color: black;
+  background-color: var(--color-title);
   padding-left: 55px;
   padding-right: 55px;
 }
 
+.header {
+  background-color: rgb(155, 155, 155);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header-link {
+  flex: 1;
+}
+
 .header h2 {
   text-align: center;
-  color: white;
+  color: var(--color-paragraph);
   background-color: rgb(155, 155, 155);
   padding: 25px;
+  font-size: 34px;
+  flex: 3;
+  margin-right: 155px;
+  margin-top: 15px;
+}
+
+button.linkButtonMovie {
+  top: 0;
+  border: none;
+  background-color: rgb(155, 155, 155);
 }
 
 .movie-detail-image {
@@ -30,8 +52,8 @@
   height: 50%;
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   margin-top: 53px;
 }
 
@@ -53,14 +75,14 @@
 
 .movie-detail-text {
   margin: 45px;
-  color: white;
+  color: var(--color-paragraph);
   font-size: 20px;
 }
 
 .movie-detail-wrapper h3 {
   margin-bottom: 3px;
   margin-top: 35px;
-  color: white;
+  color: var(--color-paragraph);
 }
 
 button.linkMovieDetail {

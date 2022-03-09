@@ -1,9 +1,11 @@
-h3 {
+@import "../../reset.css";
+
+.popular-movie h3 {
   margin-bottom: 73px;
   margin-top: 93px;
   text-align: center;
   font-size: 30px;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--typography);
 }
 .popular-container {
   height: 100%;
@@ -14,8 +16,8 @@ h3 {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-gap: 15px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 35px;
+  grid-template-columns: repeat(3, 1fr);
   margin-bottom: 57px;
 }
 
@@ -23,9 +25,9 @@ h3 {
   display: flex;
   margin-bottom: 15px;
   border-radius: 22px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 var(--card-shadow);
   height: 255px;
-  background-color: rgba(31, 31, 31, 1);
+  background-color: var(--bg-card);
 }
 
 .movie-image {
@@ -36,9 +38,18 @@ h3 {
 
 .movie-content {
   padding: 10px;
-  color: white;
+  color: var(--color-paragraph);
 }
 
 .movie-content h4 {
   font-size: 18px;
+}
+
+.link {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  transform: scale(1.1);
 }

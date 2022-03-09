@@ -55,7 +55,7 @@ const PopularMovies = () => {
               .filter((item) => item.rank <= 30)
               .map((item) => {
                 return (
-                  <Link to={`/${item.id}`}>
+                  <Link to={`/${item.id}`} key={item.id} className="link">
                     <div key={item.id} className="movie-container">
                       <img
                         className="movie-image"

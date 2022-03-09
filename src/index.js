@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -12,7 +11,6 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/:movieId" element={<MovieDetail />} />
-
       <Route path="/list-favorites" element={<ViewFavorites />} />
       <Route path="*" element={<div>404-not found</div>} />
     </Routes>
