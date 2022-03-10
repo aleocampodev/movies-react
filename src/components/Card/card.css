@@ -33,6 +33,7 @@ a.link img.card-image {
   color: var(--color-title);
   text-align: center;
   font-size: 17px;
+  margin: 15px;
 }
 
 div.card-content div.card-icon {

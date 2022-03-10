@@ -61,6 +61,8 @@
 
   div.box-right h3 {
     font-size: 22px;
+    margin: 35px;
+    text-align: center;
   }
 
   div.movie-container {
@@ -105,10 +107,6 @@
 
   div.linkButtonMovie {
     margin-top: 0;
-  }
-
-  .linkButton:before {
-    position: relative;
   }
 
   div.movie-detail-text p {
@@ -173,6 +171,27 @@
     padding-left: 9px;
     padding-right: 9px;
   }
+
+  header.App-header h1 {
+    font-size: 32px;
+    margin-bottom: 45px;
+  }
+
+  button.linkHeader {
+    top: 0;
+    right: -36px;
+  }
+
+  div.movie-content p {
+    margin: 10px;
+  }
+
+  a.linkButton span {
+    font-size: 10px;
+  }
+  div.card-container {
+    width: 90%;
+  }
 }
 
 @media (min-width: 390px) {
@@ -183,6 +202,9 @@
     place-items: none;
   }
 
+  header.App-header h1 {
+    font-size: 32px;
+  }
   div.header-link {
     right: 10px;
   }
@@ -204,8 +226,14 @@
     height: 35px;
   }
 
+  div.App-header {
+    font-size: 22px;
+  }
+
   div.box-right h3 {
     font-size: 22px;
+    text-align: center;
+    margin: 40px;
   }
   div.actors-list img {
     width: 95px;
@@ -217,8 +245,9 @@
     width: 100%;
   }
 
-  div.movie-content {
+  div.movie-content p {
     font-size: 17px;
+    margin: 8px;
   }
 
   img.movie-detail-image {
@@ -292,6 +321,14 @@
   div.movie-detail-wrapper {
     padding-left: 9px;
     padding-right: 9px;
+  }
+
+  a.linkButton span {
+    font-size: 12px;
+  }
+
+  div.card-container {
+    width: 70%;
   }
 }
 
@@ -421,6 +458,18 @@
     text-align: center;
     font-size: 25px;
   }
+
+  div.movie-content p {
+    margin: 9px;
+  }
+
+  a.linkButton span {
+    font-size: 12px;
+  }
+
+  div.card-container {
+    width: 70%;
+  }
 }
 
 @media (min-width: 640px) {
@@ -428,7 +477,7 @@
   div.popular-movie {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    place-items: none;
+    place-items: center;
   }
 
   div.header-link {
@@ -541,6 +590,14 @@
   div.movie-content > * {
     margin: 5px;
   }
+
+  a.linkButton span {
+    font-size: 12px;
+  }
+
+  div.card-container {
+    width: 80%;
+  }
 }
 
 @media (min-width: 870px) {
@@ -636,11 +693,23 @@
 
   a.linkHeader {
     position: relative;
-    right: 65px;
+    right: 5px;
   }
 
   div.movie-container {
     width: 100%;
+  }
+
+  div.movie-content p {
+    margin: 15px;
+  }
+
+  a.linkButton span {
+    font-size: 14px;
+  }
+
+  div.card-container {
+    width: 80%;
   }
 }
 
@@ -675,20 +744,20 @@
   }
 
   div.movie-content h4 {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   div.movie-detail-text p {
     margin: 35px;
   }
 
-  button.linkButtonMovie {
+  buton.linkButtonMovie {
     margin-top: 35px;
     margin-left: 35px;
   }
 
   div.movie-container p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   div.actors {
@@ -747,6 +816,30 @@
     position: relative;
     right: 55px;
   }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 10px;
+  }
+
+  div.actors-list h4 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  a.linkHeader {
+    position: relative;
+    right: 45px;
+    top: -65px;
+  }
+
+  a.linkButton span {
+    font-size: 14px;
+  }
+
+  div.card-container {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -754,6 +847,10 @@
   div.popular-movie {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  div.card-container {
+    width: 100%;
   }
 
   div.App-header {
@@ -816,7 +913,7 @@
 
   div.actors-list p {
     text-align: center;
-    margin: 15px;
+    margin: 10px;
   }
 
   div.link {
@@ -850,7 +947,7 @@
 
   div.movie-content {
     font-size: 16px;
-    margin: 35px;
+    margin: 0;
   }
 
   div.movie-content h4 {
@@ -895,6 +992,16 @@
   a.linkHeader {
     position: relative;
     right: 45px;
+    top: -65px;
+  }
+
+  div.actors-list h4 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  a.linkButton span {
+    font-size: 14px;
   }
 }
 
