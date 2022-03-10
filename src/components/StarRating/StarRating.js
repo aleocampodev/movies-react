@@ -7,10 +7,6 @@ const StarRating = ({ onChange, rating, elementId }) => {
   //const [listFavoritesStar, setListFavoritesStar] = useState(listFavorites);
   const [hover, setHover] = useState(null);
 
-  console.log("hola star");
-
-  console.log(rating, "hola");
-
   return (
     <div>
       {[...Array(5)].map((star, i) => {

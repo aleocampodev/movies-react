@@ -13,7 +13,6 @@ const ButtonFavorites = ({ image, title, description, id }) => {
 
     if (localFavorites) {
       const favs = JSON.parse(localFavorites);
-      console.log(favs, "hola favs");
       setListFavorites(favs);
       const findMovie = favs.find((element) => element.id === id);
 
@@ -23,12 +22,6 @@ const ButtonFavorites = ({ image, title, description, id }) => {
     }
   }, []);
 
-  /*useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(addFavorites));
-  }, [addFavorites]);*/
-
-  //console.log(favoriteMovie, "hola favorites");
-
   const newFavoriteMovie = {
     id: id,
     image: image,
@@ -37,20 +30,12 @@ const ButtonFavorites = ({ image, title, description, id }) => {
   };
 
   const addFavoritesMovies = () => {
-    console.log(typeof listFavorites, "list favoritos");
     const getList = localStorage.getItem("favorites");
     const getMovie = JSON.parse(getList);
 
     if (getMovie !== null) {
       const findMovie = listFavorites.find(
         (element) => element.id === newFavoriteMovie.id
-      );
-      console.log(
-        listFavorites,
-        findMovie,
-
-        "hola moviess",
-        newFavoriteMovie.id
       );
 
       if (findMovie) {
@@ -59,27 +44,23 @@ const ButtonFavorites = ({ image, title, description, id }) => {
         );
 
         setListFavorites(removeItem);
-        console.log("se encuentra item");
+
         setIsFavorite(false);
       } else {
         setListFavorites([...getMovie, newFavoriteMovie]);
-        //localStorage.setItem("favorites", JSON.stringify(listFavorites));
 
-        console.log("localstorage st 1");
         setIsFavorite(true);
       }
     } else {
       setListFavorites([...listFavorites, newFavoriteMovie]);
-      //localStorage.setItem("favorites", JSON.stringify(listFavorites));
+
       setIsFavorite(true);
-      console.log(listFavorites, "hola lista");
     }
   };
 
   useEffect(() => {
     if (listFavorites.length > 0) {
       localStorage.setItem("favorites", JSON.stringify(listFavorites));
-      console.log("hola efecto", listFavorites);
     }
   }, [listFavorites]);
 

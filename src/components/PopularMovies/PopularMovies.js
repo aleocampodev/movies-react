@@ -22,23 +22,10 @@ const PopularMovies = () => {
         `https://imdb-api.com/en/API/MostPopularMovies/k_wwo8vztv`
       );
       const resJSON = await res.json();
-      console.log(resJSON, "holajson");
       setPopularMovies(resJSON.items);
       localStorage.setItem("popularMovie", JSON.stringify(resJSON.items));
     }
   };
-
-  /*const getPopularMovies = async () => {
-    try {
-      const res = await fetch(
-        `https://imdb-api.com/en/API/MostPopularMovies/k_9u3ckjd1`
-      );
-      const resJSON = await res.json();
-      setPopularMovies(resJSON.items);
-    } catch (error) {
-      console.log(error);
-    }
-  };*/
 
   useEffect(() => {
     getPopularMovies();
