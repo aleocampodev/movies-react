@@ -22,16 +22,11 @@ function MainContainer() {
   });
   const [query, setQuery] = useSearchParams();
 
-  //console.log(typeof query.get("search"), query.get("search"), "hola query");
-
-  //const [hasError, setHasError] = useState(false);
-
   const getMovie = (nameMovie) => {
     const moviesStorage = localStorage.getItem("moviesStorage" + nameMovie);
 
     if (moviesStorage !== null) {
       setMovies(JSON.parse(moviesStorage));
-      //console.log("hola movie get");
     } else {
       setStatus({ loading: true, server: false, noData: false });
       fetch(`https://imdb-api.com/en/API/SearchMovie/k_9ggk3275/${nameMovie}`)

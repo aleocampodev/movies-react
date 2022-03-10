@@ -88,3 +88,7 @@ button.linkButtonMovie {
 button.linkMovieDetail {
   top: -85px;
 }
+
+.notShow {
+  display: none;
+}
