@@ -15,7 +15,9 @@ const MovieDetail = () => {
 
   const handleReturn = () => {
     navigate(-1);
-    localStorage.clear();
+    if (localStorage.getItem("detailMovie")) {
+      localStorage.removeItem("detailMovie");
+    }
   };
 
   const { movieId } = useParams();
