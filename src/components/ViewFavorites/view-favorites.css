@@ -1,8 +1,7 @@
 .listFavoritesTitle,
 .textNoList {
-  width: 100%;
   text-align: center;
-  margin: 52px;
+  margin: 62px;
 }
 
 .listFavorites {
@@ -57,4 +56,10 @@ svg.icon {
   position: relative;
   top: 3px;
   margin-right: 5px;
+}
+
+.listFavoritesTitle {
+  font-size: 45px;
+  font-weight: 900;
+  font-family: var(--typography);
 }
