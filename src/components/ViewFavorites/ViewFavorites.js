@@ -111,7 +111,7 @@ const ViewFavorites = () => {
                   <h4>{element.title}</h4>
                   <p>{element.description}</p>
                   <StarRating
-                    setRating={onChange}
+                    onChange={onChange}
                     rating={element.rating || 0}
                     elementId={element.id}
                   />

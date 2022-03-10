@@ -107,7 +107,7 @@
 }
 
 .linkButton:hover:before {
-  width: 90%;
+  width: 100%;
   background: var(--color-primary);
   border-radius: 5px;
   margin-left: 15px;

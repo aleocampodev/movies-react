@@ -47,6 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 25px;
   }
 
   h1.title {
@@ -64,6 +65,113 @@
 
   div.movie-container {
     height: 195px;
+  }
+
+  div.linkButton {
+    padding: 0;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  div.header {
+    flex-direction: column;
+  }
+
+  div.header-link {
+    padding: 25px;
+    text-align: center;
+  }
+
+  button.linkViewFavorites {
+    padding-top: 15px;
+    margin-left: 75px;
+  }
+  div.header h2 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  div.header h2 {
+    margin-right: 0;
+  }
+
+  div.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  .linkButton:before {
+    position: relative;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail h3 {
+    margin: 23px;
+    font-size: 33px;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail h3 {
+    margin: 23px;
+    font-size: 33px;
+  }
+
+  div.movie-detail-container {
+    padding: 25px;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 9px;
+    padding-right: 9px;
   }
 }
 
@@ -120,6 +228,70 @@
 
   div.movie-content h4 {
     font-size: 17px;
+  }
+
+  div.linkButton {
+    padding: 0;
+  }
+
+  button.linkViewFavorites {
+    margin: 0;
+
+    padding-top: 15px;
+    margin-left: 85px;
+  }
+
+  div.header {
+    flex-direction: column;
+  }
+
+  div.header h2 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  div.header h2 {
+    margin-right: 0;
+  }
+
+  div.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  .linkButton:before {
+    position: relative;
+  }
+
+  div.movie-detail-text p {
+    margin: 33px;
+  }
+
+  div.actors-list img {
+    margin: 0 auto;
+  }
+
+  div.actors-list p {
+    text-align: center;
+    margin: 33px;
+  }
+
+  div.movie-detail h3 {
+    margin: 23px;
+    font-size: 33px;
+  }
+
+  div.movie-detail-container {
+    padding: 25px;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 9px;
+    padding-right: 9px;
   }
 }
 
@@ -178,17 +350,76 @@
   }
 
   button.linkButtonMovie {
-    margin-top: 35px;
-    margin-left: 5px;
+    margin-top: 5px;
+    margin-left: 175px;
     padding-top: 19px;
   }
 
   div.header-link {
-    flex: 2;
+    flex: 3;
+    padding: 25px;
   }
 
-  div.header-link h2 {
-    text-align: none;
+  div.header {
+    flex-direction: column;
+  }
+
+  div.header h2 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  div.linkViewFavorites {
+    margin: 0;
+  }
+
+  button.linkViewFavorites {
+    margin-left: 195px;
+  }
+
+  div.header h2 {
+    margin-right: 0;
+  }
+
+  div.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  div.linkViewFavorites {
+    margin: none;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  header.App-header h1 {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+
+  div.movie-container {
+    width: 100%;
+  }
+
+  a.linkHeader {
+    top: -2px;
+  }
+
+  a.link {
+    width: 100%;
+  }
+
+  div.movie-content div.movie-content > * {
+    margin: 5px;
+  }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+    font-size: 25px;
   }
 }
 
@@ -196,7 +427,7 @@
   div.content-card,
   div.popular-movie {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     place-items: none;
   }
 
@@ -206,6 +437,7 @@
 
   div.header h2 {
     font-size: 39px;
+    padding-right: 255px;
   }
 
   div.actors {
@@ -259,6 +491,15 @@
     margin-top: 35px;
     margin-left: 5px;
     padding-top: 19px;
+    flex: 2;
+  }
+
+  div.linkButton {
+    padding: 0;
+  }
+
+  div.linkViewFavorites {
+    margin: none;
   }
 
   div.actors-list img {
@@ -269,9 +510,40 @@
     text-align: center;
     margin: 15px;
   }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  button.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  header.App-header h1 {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+
+  div.movie-container {
+    width: 100%;
+  }
+
+  a.linkHeader {
+    top: -2px;
+  }
+
+  div.movie-content > * {
+    margin: 5px;
+  }
 }
 
-@media (min-width: 784px) {
+@media (min-width: 870px) {
   div.content-card,
   div.popular-movie {
     display: grid;
@@ -340,6 +612,36 @@
     text-align: center;
     margin: 33px;
   }
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  button.linkButtonMovie {
+    margin-top: 0;
+  }
+  div.movie-detail-wrapper {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  div.box-right h3 {
+    font-size: 25px;
+    margin: 35px;
+    text-align: center;
+  }
+
+  header.App-header h1 {
+    font-size: 45px;
+  }
+
+  a.linkHeader {
+    position: relative;
+    right: 65px;
+  }
+
+  div.movie-container {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -351,6 +653,7 @@
 
   div.header h2 {
     font-size: 50px;
+    padding-right: 355px;
   }
 
   div.movie-detail h3 {
@@ -406,6 +709,44 @@
     text-align: center;
     margin: 32px;
   }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  button.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  header.App-header h1 {
+    font-size: 45px;
+  }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  a.link {
+    width: 100%;
+  }
+
+  div.movie-content > * {
+    font-size: 16px;
+    margin: 15px;
+  }
+
+  a.linkHeader {
+    position: relative;
+    right: 55px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -415,8 +756,17 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  div.App-header {
+    font-size: 55px;
+  }
+
   div.header h2 {
     font-size: 52px;
+    padding-right: 255px;
+  }
+
+  div.header-link {
+    flex: 1;
   }
 
   div.box-right {
@@ -471,13 +821,13 @@
 
   div.link {
     text-decoration: none;
-    color: white;
+    color: var(--color-paragraph);
     margin: 0 auto;
     width: 60%;
   }
 
   div.link:hover {
-    color: black;
+    color: var(--color-title);
   }
 
   div.movie-detail div.movie-detail-container {
@@ -493,13 +843,14 @@
     font-size: 33px;
   }
 
-  div.App-header {
-    font-size: 26px;
+  header.App-header h1 {
+    font-size: 46px;
     font-family: "Open Sans", sans-serif;
   }
 
   div.movie-content {
     font-size: 16px;
+    margin: 35px;
   }
 
   div.movie-content h4 {
@@ -516,6 +867,34 @@
 
   div.box-right h3 {
     font-size: 30px;
+  }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  button.linkButtonMovie {
+    margin-top: 0;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  div.box-right h3 {
+    margin: 55px;
+    text-align: center;
+  }
+
+  a.link {
+    width: 100%;
+  }
+
+  a.linkHeader {
+    position: relative;
+    right: 45px;
   }
 }
 
@@ -570,6 +949,8 @@
     display: flex;
     position: absolute;
     right: 150px;
+
+    flex: 1;
   }
 
   div.header-link:hover {
@@ -608,5 +989,15 @@
 
   div.movie-content h4 {
     font-size: 20px;
+  }
+
+  div.header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  div.movie-detail-wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
