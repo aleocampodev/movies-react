@@ -34,7 +34,6 @@ function MainContainer() {
           return res.json();
         })
         .then((data) => {
-          console.log("movies", data.results);
           if (!data.results || !data.results.length) {
             setStatus({
               loading: false,
@@ -45,13 +44,10 @@ function MainContainer() {
           }
 
           setMovies(data.results);
-          //setMovies([...movies, ...data.results]);
           localStorage.setItem(
             "moviesStorage" + nameMovie,
             JSON.stringify(data.results)
           );
-          //setMovies([...movies, ...data.results]);
-          //console.log(data.results, "movies");
           setStatus({
             loading: false,
             server: false,
@@ -75,12 +71,7 @@ function MainContainer() {
     }
   }, []);
 
-  /*useEffect(() => {
-    localStorage.setItem("moviesStorage", movies);
-  }, [movies]);*/
-
   const onSubmit = (value) => {
-    //console.log("hola jwiw", value.nameMovie);
     getMovie(value.nameMovie);
     setQuery({ search: value.nameMovie });
   };

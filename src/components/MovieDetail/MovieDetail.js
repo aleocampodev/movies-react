@@ -20,8 +20,6 @@ const MovieDetail = () => {
 
   const { movieId } = useParams();
 
-  console.log(useParams(), "hola params");
-
   const getDetailMovie = async () => {
     const detailMovie = localStorage.getItem("detailMovie");
 
@@ -33,7 +31,6 @@ const MovieDetail = () => {
         const res = await fetch(
           `https://imdb-api.com/en/API/Title/k_wwo8vztv/${movieId}`
         );
-        console.log(res, "holi jlals");
         if (res.status === 200) {
           setStatus({
             loading: false,
@@ -54,10 +51,6 @@ const MovieDetail = () => {
           });
         }
         const resJSON = await res.json();
-
-        console.log(resJSON, "hola json");
-
-        console.log("hola JSOOON", resJSON);
 
         setMovieDetail(resJSON);
 
@@ -84,7 +77,6 @@ const MovieDetail = () => {
         server: false,
         noData: false,
       });
-      console.log("hola compo");
     }
 
     if (!status.loading) {
@@ -95,7 +87,6 @@ const MovieDetail = () => {
           noData: false,
         });
       }, 3000);
-      console.log("hola compo");
     }
   }, [status.loading]);
 

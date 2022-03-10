@@ -5,8 +5,6 @@ import StarRating from "../StarRating/StarRating";
 import "./view-favorites.css";
 
 const localListFavorites = localStorage.getItem("favorites");
-//const listFavorites = JSON.parse(localListFavorites);
-console.log(localListFavorites, "hola jsuod");
 
 const ViewFavorites = () => {
   const [listFavoritesStar, setListFavoritesStar] = useState(
@@ -32,54 +30,11 @@ const ViewFavorites = () => {
     );
   };
 
-  /*const localFavorites = localStorage.getItem("favorites");
-
-    if (localFavorites) {
-      const favs = JSON.parse(localFavorites);
-      console.log(favs, "hola favs");
-      setListFavorites(favs);
-      const findMovie = favs.find((element) => element.id === id);
-
-      if (findMovie) {
-        setIsFavorite(true);
-      }
-    } */
-
-  /*useEffect(() => {
-    if (listFavoritesStar) {
-      
-      
-    }
-    /* if (listFavorites) {
-      listFavorites.map((item, id) => {
-        console.log(item, "hola elemento");
-        /*const findStar = listFavoritesStar.find((element) => {
-          console.log(element, "elemento");
-          return element.id !== id;
-        });
-
-        if (findStar) {
-          const localStorageFavorites = [{ ...item, findStar }];
-          console.log(localStorageFavorites, "hola listaosj");
-          localStorage.setItem(
-            "favorites",
-            JSON.stringify(localStorageFavorites)
-          );
-        }
-      });
-      console.log(listFavorites, "hola listFavorites");
-    }*/
-
-  console.log(listFavoritesStar, "hola favorita");
-
   useEffect(() => {
     if (listFavoritesStar !== null && listFavoritesStar.length > 0) {
       localStorage.setItem("favorites", JSON.stringify(listFavoritesStar));
-      console.log("hola efecto", listFavoritesStar);
     }
   }, [listFavoritesStar]);
-
-  console.log(listFavoritesStar, "Hola favorita ");
 
   const handleReturn = () => {
     navigate(-1);
