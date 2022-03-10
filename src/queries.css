@@ -192,6 +192,57 @@
   div.card-container {
     width: 90%;
   }
+
+  button.buttonViewFavorites {
+    border: none;
+    background-color: var(--color-paragraph);
+    position: relative;
+    top: -5px;
+    left: 8px;
+  }
+
+  p.textNotViewFavorites {
+    font-size: 18px;
+    font-family: var(--typography);
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  h2.listFavoritesTitle {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  div.listFavorites {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  div.listFavoritesCard {
+    width: 90%;
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent h4 {
+    font-size: 20px;
+  }
+
+  div.listFavoritesContent > * {
+    margin: 10px;
+  }
+
+  svg.star {
+    font-size: 20px;
+  }
+
+  div.listFavoritesContent {
+    font-size: 14px;
+    font-family: var(--typography);
+    background-color: var(--bg-card);
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
 }
 
 @media (min-width: 390px) {
@@ -292,10 +343,6 @@
     margin-top: 0;
   }
 
-  .linkButton:before {
-    position: relative;
-  }
-
   div.movie-detail-text p {
     margin: 33px;
   }
@@ -329,6 +376,56 @@
 
   div.card-container {
     width: 70%;
+  }
+
+  button.buttonViewFavorites {
+    border: none;
+    background-color: var(--color-paragraph);
+    position: relative;
+    top: -35px;
+    left: -68px;
+  }
+
+  p.textNotViewFavorites {
+    font-size: 18px;
+    font-family: var(--typography);
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  h2.listFavoritesTitle {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  div.listFavorites {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  div.listFavoritesCard {
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent {
+    font-size: 14px;
+    font-family: var(--typography);
+    background-color: var(--bg-card);
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent h4 {
+    font-size: 20px;
+  }
+
+  div.listFavoritesContent > * {
+    margin: 10px;
+  }
+
+  svg.star {
+    font-size: 30px;
   }
 }
 
@@ -470,6 +567,50 @@
   div.card-container {
     width: 70%;
   }
+
+  h2.listFavoritesTitle {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  button.buttonViewFavorites {
+    border: none;
+    background-color: var(--color-paragraph);
+    position: relative;
+    top: -45px;
+    left: -168px;
+  }
+
+  p.textNotViewFavorites {
+    font-size: 18px;
+    font-family: var(--typography);
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  div.listFavorites {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  div.listFavoritesCard {
+    width: 70%;
+  }
+
+  div.listFavoritesContent {
+    font-size: 14px;
+    font-family: var(--typography);
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent h4 {
+    font-size: 20px;
+  }
+
+  div.listFavoritesContent > * {
+    margin: 10px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -598,6 +739,55 @@
   div.card-container {
     width: 80%;
   }
+
+  h2.listFavoritesTitle {
+    font-size: 35px;
+    font-weight: 900;
+  }
+
+  button.buttonViewFavorites {
+    border: none;
+    background-color: var(--color-paragraph);
+    position: relative;
+    top: -75px;
+    left: -168px;
+  }
+
+  p.textNotViewFavorites {
+    font-size: 18px;
+    font-family: var(--typography);
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  div.listFavorites {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  div.listFavoritesCard {
+    width: 60%;
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent {
+    font-size: 16px;
+    font-family: var(--typography);
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent h4 {
+    font-size: 29px;
+  }
+
+  div.listFavoritesContent > * {
+    margin: 10px;
+  }
+
+  svg.star {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 870px) {
@@ -653,6 +843,7 @@
 
   div.listFavoritesCard {
     margin-left: 15px;
+    border-radius: 22px;
   }
 
   button.linkButtonMovie {
@@ -711,13 +902,55 @@
   div.card-container {
     width: 80%;
   }
+
+  button.buttonViewFavorites {
+    border: none;
+    background-color: var(--color-paragraph);
+    position: relative;
+    top: -75px;
+    left: -88px;
+  }
+
+  p.textNotViewFavorites {
+    font-size: 18px;
+    font-family: var(--typography);
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  div.listFavorites {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.listFavoritesCard {
+    width: 90%;
+  }
+  div.listFavoritesContent {
+    font-size: 16px;
+    font-family: var(--typography);
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent h4 {
+    font-size: 29px;
+  }
+
+  div.listFavoritesContent > * {
+    margin: 10px;
+  }
+
+  svg.star {
+    font-size: 35px;
+  }
 }
 
 @media (min-width: 1024px) {
   div.content-card,
   div.popular-movie {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   div.header h2 {
@@ -839,6 +1072,49 @@
 
   div.card-container {
     width: 100%;
+  }
+
+  button.buttonViewFavorites {
+    border: none;
+    background-color: var(--color-paragraph);
+    position: relative;
+    top: -85px;
+  }
+
+  p.textNotViewFavorites {
+    font-size: 18px;
+    font-family: var(--typography);
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  div.listFavorites {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.listFavoritesCard {
+    width: 80%;
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent {
+    font-size: 16px;
+    font-family: var(--typography);
+    margin: 10px;
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent h4 {
+    font-size: 29px;
+  }
+  div.listFavoritesContent > * {
+    margin: 10px;
+  }
+
+  svg.star {
+    font-size: 35px;
   }
 }
 
@@ -1002,6 +1278,53 @@
 
   a.linkButton span {
     font-size: 14px;
+  }
+
+  h2.listFavoritesTitle {
+    font-size: 45px;
+    font-weight: 900;
+  }
+
+  button.buttonViewFavorites {
+    border: none;
+    background-color: var(--color-paragraph);
+    position: relative;
+    top: -95px;
+  }
+
+  p.textNotViewFavorites {
+    font-size: 18px;
+    font-family: var(--typography);
+    text-align: center;
+    margin-top: 55px;
+  }
+
+  div.listFavorites {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.listFavoritesCard {
+    width: 80%;
+  }
+
+  div.listFavoritesContent {
+    font-size: 16px;
+    font-family: var(--typography);
+    border-radius: 22px;
+  }
+
+  div.listFavoritesContent h4 {
+    font-size: 29px;
+  }
+
+  div.listFavoritesContent > * {
+    margin: 10px;
+  }
+
+  svg.star {
+    font-size: 40px;
   }
 }
 
