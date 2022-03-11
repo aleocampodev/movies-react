@@ -8,7 +8,7 @@ const MovieDetail = () => {
   const [movieDetail, setMovieDetail] = useState({});
   const navigate = useNavigate();
   const [status, setStatus] = useState({
-    loading: false,
+    loading: true,
     server: false,
     noData: false,
   });
@@ -28,7 +28,7 @@ const MovieDetail = () => {
     if (detailMovie !== null) {
       setMovieDetail(JSON.parse(detailMovie));
     } else {
-      setStatus({ loading: true, server: false, noData: false });
+      setStatus({ loading: false, server: false, noData: false });
       try {
         const res = await fetch(
           `https://imdb-api.com/en/API/Title/k_wwo8vztv/${movieId}`

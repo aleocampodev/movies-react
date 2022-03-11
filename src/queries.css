@@ -177,9 +177,10 @@
     margin-bottom: 45px;
   }
 
-  button.linkHeader {
+  a.linkHeader {
     top: 0;
-    right: -36px;
+    right: -10px;
+    margin-left: 0;
   }
 
   div.movie-content p {
@@ -242,6 +243,12 @@
     background-color: var(--bg-card);
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
+  }
+
+  .form-input p.status {
+    position: absolute;
+    margin-left: 33px;
+    margin-top: 15px;
   }
 }
 
@@ -427,6 +434,16 @@
   svg.star {
     font-size: 30px;
   }
+
+  .form-input p.status {
+    position: absolute;
+    margin-left: 43px;
+    margin-top: 15px;
+  }
+
+  a.linkHeader {
+    margin-left: 35px;
+  }
 }
 
 @media (min-width: 505px) {
@@ -611,6 +628,16 @@
   div.listFavoritesContent > * {
     margin: 10px;
   }
+
+  .form-input p.status {
+    position: absolute;
+    margin-left: 53px;
+    margin-top: 15px;
+  }
+
+  a.linkHeader {
+    margin-left: 35px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -730,6 +757,8 @@
 
   a.linkHeader {
     top: -2px;
+
+    margin-left: 35px;
   }
 
   div.movie-content > * {
@@ -791,6 +820,12 @@
 
   svg.star {
     font-size: 30px;
+  }
+
+  .form-input p.status {
+    position: absolute;
+    margin-left: 73px;
+    margin-top: 15px;
   }
 }
 
@@ -893,6 +928,8 @@
   a.linkHeader {
     position: relative;
     right: 5px;
+
+    margin-left: 35px;
   }
 
   div.movie-container {
@@ -951,6 +988,12 @@
 
   svg.star {
     font-size: 35px;
+  }
+
+  .form-input p.status {
+    position: absolute;
+    margin-left: 103px;
+    margin-top: 15px;
   }
 }
 
@@ -1060,6 +1103,8 @@
   a.linkHeader {
     position: relative;
     right: 55px;
+
+    margin-left: 35px;
   }
 
   div.actors-list p {
@@ -1127,6 +1172,12 @@
 
   svg.star {
     font-size: 35px;
+  }
+
+  .form-input p.status {
+    position: absolute;
+    margin-left: 133px;
+    margin-top: 15px;
   }
 }
 
@@ -1284,6 +1335,8 @@
     position: relative;
     right: 45px;
     top: -65px;
+
+    margin-left: 35px;
   }
 
   div.actors-list h4 {
@@ -1340,6 +1393,29 @@
 
   svg.star {
     font-size: 40px;
+  }
+
+  .form-input .status {
+    position: absolute;
+    margin-left: 133px;
+    margin-top: 15px;
+  }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
+  }
+
+  svg.close:hover {
+    color: var(--color-paragraph);
+    background-color: var(--color-primary);
   }
 }
 
@@ -1444,5 +1520,17 @@
   div.movie-detail-wrapper {
     padding-left: 45px;
     padding-right: 45px;
+  }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
   }
 }

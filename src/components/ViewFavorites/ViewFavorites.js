@@ -11,6 +11,8 @@ const ViewFavorites = () => {
   const [listFavoritesStar, setListFavoritesStar] = useState(
     JSON.parse(localListFavorites)
   );
+
+  console.log("hola vista favoritos", listFavoritesStar);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -37,6 +39,7 @@ const ViewFavorites = () => {
       setListFavoritesStar(remove);
     }
     if (listFavoritesStar.length === 1 && localListFavorites) {
+      console.log("hola bug");
       localStorage.removeItem("favorites");
     }
   };

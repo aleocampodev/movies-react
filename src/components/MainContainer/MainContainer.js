@@ -34,6 +34,12 @@ function MainContainer() {
           return res.json();
         })
         .then((data) => {
+          console.log("hola data", data.results);
+          setMovies(data.results);
+          localStorage.setItem(
+            "moviesStorage" + nameMovie,
+            JSON.stringify(data.results)
+          );
           if (!data.results || !data.results.length) {
             setStatus({
               loading: false,
@@ -42,12 +48,7 @@ function MainContainer() {
             });
             return;
           }
-
-          localStorage.setItem(
-            "moviesStorage" + nameMovie,
-            JSON.stringify(data.results)
-          );
-          setMovies(data.results);
+          console.log(movies, "hola movies");
           setStatus({
             loading: false,
             server: false,
