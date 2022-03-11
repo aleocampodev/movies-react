@@ -50,7 +50,7 @@ figure {
 
   display: block;
   object-fit: cover;
-  object-position: top center;
+  /*object-position: top center;*/
 }
 
 /* excepto los que se encuentran en parafo*/

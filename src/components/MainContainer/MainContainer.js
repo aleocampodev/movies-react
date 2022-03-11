@@ -43,11 +43,11 @@ function MainContainer() {
             return;
           }
 
-          setMovies(data.results);
           localStorage.setItem(
             "moviesStorage" + nameMovie,
             JSON.stringify(data.results)
           );
+          setMovies(data.results);
           setStatus({
             loading: false,
             server: false,

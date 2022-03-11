@@ -621,6 +621,10 @@
     place-items: center;
   }
 
+  div.content-card {
+    grid-gap: 45px;
+  }
+
   div.header-link {
     right: 10px;
   }
@@ -796,6 +800,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  div.content-card {
+    grid-gap: 45px;
+  }
   div.header h2 {
     font-size: 39px;
     flex: 2;
@@ -951,6 +959,10 @@
   div.popular-movie {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  div.content-card {
+    grid-gap: 45px;
   }
 
   div.header h2 {
@@ -1123,6 +1135,9 @@
   div.popular-movie {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  div.content-card {
+    grid-gap: 45px;
   }
 
   div.card-container {
