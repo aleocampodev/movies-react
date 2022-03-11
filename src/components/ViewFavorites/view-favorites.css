@@ -63,3 +63,7 @@ svg.icon {
   font-weight: 900;
   font-family: var(--typography);
 }
+
+.close {
+  cursor: pointer;
+}

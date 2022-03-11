@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineClose } from "react-icons/ai";
 
 import StarRating from "../StarRating/StarRating";
 import "./view-favorites.css";
@@ -30,6 +31,16 @@ const ViewFavorites = () => {
     );
   };
 
+  const removeItem = (id) => {
+    if (id) {
+      const remove = listFavoritesStar.filter((element) => element.id !== id);
+      setListFavoritesStar(remove);
+    }
+    if (listFavoritesStar.length === 1 && localListFavorites) {
+      localStorage.removeItem("favorites");
+    }
+  };
+
   useEffect(() => {
     if (listFavoritesStar !== null && listFavoritesStar.length > 0) {
       localStorage.setItem("favorites", JSON.stringify(listFavoritesStar));
@@ -39,6 +50,26 @@ const ViewFavorites = () => {
   const handleReturn = () => {
     navigate(-1);
   };
+
+  /*const removeItem = () => {
+    const findViewMovie = listFavoritesStar.find((element, i) => {
+      return element.id === element.id;
+    });
+
+    console.log(findViewMovie);
+  };
+
+  /*if (findMovie) {
+      const getViewFavorites = listFavoritesStar.filter((item) => {
+        console.log(item, "hola item");
+        return item.id !== item.id;
+      });
+
+      setListFavoritesStar(getViewFavorites);
+    }
+
+    console.log("hola");
+  };*/
 
   return (
     <>
@@ -76,6 +107,10 @@ const ViewFavorites = () => {
                     elementId={element.id}
                   />
                 </div>
+                <AiOutlineClose
+                  onClick={() => removeItem(element.id)}
+                  className="close"
+                />
               </div>
             );
           })}
