@@ -54,26 +54,6 @@ const ViewFavorites = () => {
     navigate(-1);
   };
 
-  /*const removeItem = () => {
-    const findViewMovie = listFavoritesStar.find((element, i) => {
-      return element.id === element.id;
-    });
-
-    console.log(findViewMovie);
-  };
-
-  /*if (findMovie) {
-      const getViewFavorites = listFavoritesStar.filter((item) => {
-        console.log(item, "hola item");
-        return item.id !== item.id;
-      });
-
-      setListFavoritesStar(getViewFavorites);
-    }
-
-    console.log("hola");
-  };*/
-
   return (
     <>
       <h2 className="listFavoritesTitle"> Favorites List</h2>
