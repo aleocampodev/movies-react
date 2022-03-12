@@ -42,7 +42,9 @@ const ButtonFavorites = ({ image, title, description, id }) => {
         const removeItem = listFavorites.filter(
           (element) => element.id !== newFavoriteMovie.id
         );
-
+        if (listFavorites.length === 1 && getMovie) {
+          localStorage.removeItem("favorites");
+        }
         setListFavorites(removeItem);
 
         setIsFavorite(false);

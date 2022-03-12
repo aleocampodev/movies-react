@@ -250,6 +250,23 @@
     margin-left: 33px;
     margin-top: 15px;
   }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
+  }
+
+  svg.close:hover {
+    color: var(--color-paragraph);
+    background-color: var(--color-primary);
+  }
 }
 
 @media (min-width: 390px) {
@@ -443,6 +460,23 @@
 
   a.linkHeader {
     margin-left: 35px;
+  }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
+  }
+
+  svg.close:hover {
+    color: var(--color-paragraph);
+    background-color: var(--color-primary);
   }
 }
 
@@ -638,6 +672,23 @@
   a.linkHeader {
     margin-left: 35px;
   }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
+  }
+
+  svg.close:hover {
+    color: var(--color-paragraph);
+    background-color: var(--color-primary);
+  }
 }
 
 @media (min-width: 640px) {
@@ -827,6 +878,23 @@
     margin-left: 73px;
     margin-top: 15px;
   }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
+  }
+
+  svg.close:hover {
+    color: var(--color-paragraph);
+    background-color: var(--color-primary);
+  }
 }
 
 @media (min-width: 870px) {
@@ -994,6 +1062,23 @@
     position: absolute;
     margin-left: 103px;
     margin-top: 15px;
+  }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
+  }
+
+  svg.close:hover {
+    color: var(--color-paragraph);
+    background-color: var(--color-primary);
   }
 }
 
@@ -1178,6 +1263,23 @@
     position: absolute;
     margin-left: 133px;
     margin-top: 15px;
+  }
+
+  svg.close {
+    color: var(--color-primary);
+    border-radius: 50%;
+    background: var(--color-paragraph);
+    width: 50px;
+    height: 30px;
+    font-size: 30px;
+    position: relative;
+    right: 15px;
+    top: 15px;
+  }
+
+  svg.close:hover {
+    color: var(--color-paragraph);
+    background-color: var(--color-primary);
   }
 }
 
