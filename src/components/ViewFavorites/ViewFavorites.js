@@ -34,13 +34,15 @@ const ViewFavorites = () => {
   };
 
   const removeItem = (id) => {
+    const listFavorite = JSON.parse(localStorage.getItem("favorites"));
     if (id) {
       const remove = listFavoritesStar.filter((element) => element.id !== id);
       setListFavoritesStar(remove);
-    }
-    if (listFavoritesStar.length === 1 && localListFavorites) {
-      console.log("hola bug");
-      localStorage.removeItem("favorites");
+
+      if (listFavorite && listFavoritesStar.length === 1) {
+        console.log("hola bug", listFavoritesStar.length);
+        localStorage.removeItem("favorites");
+      }
     }
   };
 
